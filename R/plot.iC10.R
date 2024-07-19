@@ -20,12 +20,8 @@ function (x, sample.name = 1, newdata = NULL, ...)
     }
     max.grey.square <- nrow(cn.features)
     features <- rbind(cn.features, exp.features)
-    if (attr(x, "ref") == "hg18") {
-        features$CHROM <- features$chromosome_name_hg18
-    }
-    if (attr(x, "ref") == "hg19") {
-        features$CHROM <- features$chromosome_name_hg19
-    }
+  	ref <- paste("chromosome_name", attr(x, "ref"), sep="_")
+        features$CHROM <- features[,ref]
     Pos <- c(1, which(diff(features$CHROM) != 0), nrow(features))
     text.pos <- Pos + c(diff(Pos)/2, 0)
     text.pos <- text.pos[-length(text.pos)]

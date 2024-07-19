@@ -1,3 +1,7 @@
+iC10 2.0
+- Fixed bugs when copy number regions don't cover the whole genome
+- Fixed bugs when classifying one sample only
+- Added support for hg38
 iC10 1.5
 - Changed dependency from pam.knn.impute to impute
 iC10 1.4.0

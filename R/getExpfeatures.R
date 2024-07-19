@@ -42,7 +42,7 @@ function(Exp, Probes, Synonyms, by.feat) {
         rownames(DS.gene) <- Probes
         colnames(DS.gene) <- colnames(Exp)
         Exp <- DS.gene
-        cat("Found ", no.na, " out of ", length(Probes), " Exp features\n")
+        message(paste0("Found ", no.na, " out of ", length(Probes), " Exp features\n"))
     }
     as.matrix(Exp)
 }

@@ -28,13 +28,9 @@ function(obj, iC10=1:10, newdata, name.test="Test",...) {
        features <- rbind(cn.features[,common.cols], exp.features[,common.cols])
     } 
 
-    if (attr(obj, "ref") == "hg18") {
-        features$CHROM <- features$chromosome_name_hg18
-    }
-    if (attr(obj, "ref") == "hg19") {
-        features$CHROM <- features$chromosome_name_hg19
-    }
-    Pos <- c(1, which(diff(features$CHROM)!=0), nrow(features))
+   	ref <- paste("chromosome_name", attr(obj, "ref"), sep="_")
+        features$CHROM <- features[,ref]
+   Pos <- c(1, which(diff(features$CHROM)!=0), nrow(features))
     text.pos <- Pos + c(diff(Pos)/2, 0)
     text.pos <- text.pos[-length(text.pos)]
     all.data <- rbind(newdata$CN, newdata$Exp)

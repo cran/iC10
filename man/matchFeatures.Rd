@@ -40,7 +40,7 @@ Either "probe" or "gene", Default is "probe".
 Either "probe" or "gene", Default is "gene".
 }
   \item{ref}{
-Etiher "hg18" or "hg19". It is used to match the copy number probes if \code{CN.by.feat} is "probe"
+Either "hg18", "hg19" or "hg38". It is used to match the copy number probes if \code{CN.by.feat} is "probe"
 }
 }
 \details{
