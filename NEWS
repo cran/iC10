@@ -1,3 +1,5 @@
+iC10 2.0.3
+- Fixed a bug in compare() that shows wrong x label in the centroids when there are missing data
 iC10 2.0
 - Fixed bugs when copy number regions don't cover the whole genome
 - Fixed bugs when classifying one sample only

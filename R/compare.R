@@ -10,7 +10,11 @@ function(obj, iC10=1:10, newdata, name.test="Test",...) {
     cn.features <- NULL
     exp.features <- NULL
     if (attr(obj, "classifier.type") != "Exp") {
+        cn.names <- sub("_CN", "", rownames(obj$centroids))
         cn.features <- newdata$map.cn
+        rownames(cn.features) <- cn.features[,1]
+        cn.features <- cn.features[cn.names,]
+        newdata$CN <- newdata$CN[cn.names,]
 	if ("Synonyms_0" %in% colnames(cn.features)) {
 	   cn.features <- cn.features[,-which(colnames(cn.features) %in% c("Synonyms_0", "Gene.Chosen"))]
          }
@@ -18,7 +22,11 @@ function(obj, iC10=1:10, newdata, name.test="Test",...) {
 	features <- cn.features
     }
     if (attr(obj, "classifier.type") != "CN") {
+        exp.names <- sub("_Exp", "", rownames(obj$centroids))
         exp.features <- newdata$map.exp
+        rownames(exp.features) <- exp.features[,1]
+        exp.features <- exp.features[exp.names,]
+        newdata$Exp <- newdata$Exp[exp.names,]
         exp.features$Type <- "Exp"
 	features <- exp.features
     }
@@ -26,7 +34,7 @@ function(obj, iC10=1:10, newdata, name.test="Test",...) {
     if (!is.null(cn.features) & !is.null(exp.features)) {
         common.cols <- intersect(colnames(cn.features), colnames(exp.features))
        features <- rbind(cn.features[,common.cols], exp.features[,common.cols])
-    } 
+    }
 
    	ref <- paste("chromosome_name", attr(obj, "ref"), sep="_")
         features$CHROM <- features[,ref]

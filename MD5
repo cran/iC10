@@ -1,7 +1,7 @@
-83a91272ad46eefe57607076abb6b400 *DESCRIPTION
+960a54f76e1218af5ab38c22c9fe4cb5 *DESCRIPTION
 c0b5c660e33a33df4dc2eb9e57ce8ff6 *NAMESPACE
-7ccebe67320e2963af5ed55edc2f473a *NEWS
-71034e0ce16cd63734550b86eb74703d *R/compare.R
+09da2b099896f51fff50ecd895465a4e *NEWS
+1b23e4b382e745f4688506fca6624041 *R/compare.R
 96ba1960c02107e639ca5b1a0557668e *R/getCNfeatures.R
 cd0ac48ebffc3f20ba0f6ca97b4332e0 *R/getExpfeatures.R
 31a92c1b789024cbebe3f464a422d8f6 *R/goodnessOfFit.R
@@ -11,7 +11,7 @@ cd0ac48ebffc3f20ba0f6ca97b4332e0 *R/getExpfeatures.R
 af3f35addf816b09175cd4ef1b0d7c61 *R/plot.iC10.R
 23b59830ec78bfc29167c00f7975c3ee *R/print.iC10.R
 59706aa45ab0d87ba365e12228ca1018 *R/summary.iC10.R
-4d5530ec77dd84ee2be5fdbcc0385007 *build/partial.rdb
+a07236a47d9ff578a46744e6a7663d54 *build/partial.rdb
 a1965af6c97f1a5a334b05b2b13175b0 *man/compare.Rd
 98185944e7ecb75c72d8b10a254d173d *man/getCNfeatures.Rd
 dd0611e5c224eaa49c2f7dfad113ac81 *man/getExpfeatures.Rd
